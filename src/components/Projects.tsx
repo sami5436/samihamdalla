@@ -2,9 +2,33 @@
 const Projects = () => {
   const projects = [
     {
+      title: 'TerraScope',
+      description: 'A desktop GUI application built with Python that simplifies cloud infrastructure as code. Features a drag-and-drop interface for Terraform resource management, JSON schema template loading, and direct CLI integration with object-oriented design principles.',
+      tech: ['Python', 'PyQt', 'Terraform', 'OOP', 'AWS', 'Azure'],
+      image: '/api/placeholder/600/340',
+      githubLink: '#',
+      liveLink: '#'
+    },
+    {
+      title: 'FlightCast',
+      description: 'Machine learning system that predicts flight delays based on historical airline data. Built using R with Random Forest, Decision Trees, and Logistic Regression models achieving 83% accuracy in delay predictions.',
+      tech: ['R', 'Random Forest', 'Decision Trees', 'Data Visualization', 'Statistical Analysis'],
+      image: '/api/placeholder/600/340',
+      githubLink: '#',
+      liveLink: '#'
+    },
+    {
+      title: 'TeachAssist AI',
+      description: 'A 24/7 teaching assistant RAG (Retrieval Augmented Generation) system that allows instructors to upload course materials and documentation for students to query at any time, improving access to help outside office hours.',
+      tech: ['Python', 'LangChain', 'OpenAI API', 'Vector Databases', 'React'],
+      image: '/api/placeholder/600/340',
+      githubLink: '#',
+      liveLink: '#'
+    },
+    {
       title: 'Space Guard',
       description: 'An application leveraging crowdsourced data to track orbital debris and improve hazard detection, enhancing spacecraft safety and mission planning.',
-      tech: ['React', 'Node.js', 'Azure SQL Database'],
+      tech: ['React', 'Node.js', 'Azure SQL'],
       image: '/api/placeholder/600/340',
       githubLink: '#',
       liveLink: '#'
@@ -12,7 +36,7 @@ const Projects = () => {
     {
       title: 'Dreamlandia',
       description: 'A full-stack theme park management application with real-time updates, integrated with Azure SQL database. Implements complete CRUD operations for park attractions and guest management.',
-      tech: ['React', 'Node.js', 'Azure SQL Database'],
+      tech: ['React', 'SQL', 'Azure SQL Database'],
       image: '/api/placeholder/600/340',
       githubLink: '#',
       liveLink: '#'
@@ -20,12 +44,13 @@ const Projects = () => {
     {
       title: 'CrohnCare',
       description: 'A healthcare application for Crohn\'s disease patients to track symptoms and identify patterns using machine learning, helping users manage their condition more effectively.',
-      tech: ['React', 'Node.js', 'Azure SQL Database', 'Numpy', 'Pandas', 'Docker'],
+      tech: ['React', 'Python', 'Node.js', 'MongoDB', 'Numpy', 'Pandas'],
       image: '/api/placeholder/600/340',
       githubLink: '#',
       liveLink: '#'
     }
   ];
+
 
   return (
     <div className="py-24 px-6 bg-gray-50" id="projects">
