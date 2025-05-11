@@ -20,8 +20,7 @@ const About = () => {
             
             <p className="text-gray-700 mb-4">
               I'm a Computer Science student at the University of Houston with a strong passion for 
-              building scalable, impactful software solutions. With a 3.99 GPA and experience at organizations 
-              like NASA and ExxonMobil, I combine academic excellence with practical industry experience.
+              building scalable, impactful software solutions.
             </p>
             
             <p className="text-gray-700 mb-6">
