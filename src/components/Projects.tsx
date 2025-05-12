@@ -65,6 +65,8 @@ const Projects = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {/* more mapping lol just in case i add more projects! */}
           {projects.map((project, index) => (
             <div 
               key={index} 
@@ -101,6 +103,7 @@ const Projects = () => {
                 <p className="text-gray-700 mb-4">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
+                  {/* mapping through the tech stack */}
                   {project.tech.map((tech, i) => (
                     <span 
                       key={i}
