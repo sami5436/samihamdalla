@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const [loaded, setLoaded] = useState(false);
-  
+
+  // Simulate loading effect
+  // again this is turned on when the component mounts
   useEffect(() => {
     setLoaded(true);
   }, []);
@@ -24,6 +26,10 @@ const Hero = () => {
         </h1>
         
         <div className="h-8 mb-6">
+          {/* used a mapping just in case wanted */}
+          {/* found this animate-fadeIn class on tailwindcss.com
+          it animates the opacity from 0 to 1
+          and the animation-delay is set to 3s for each title */}
           {titles.map((title, index) => (
             <p 
               key={title}
@@ -47,6 +53,7 @@ const Hero = () => {
           <a href="#projects" className="px-8 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors">
             View Projects
           </a>
+          {/* i might change this to something else later */}
           <a href="#contact" className="px-8 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors">
             Contact Me
           </a>
