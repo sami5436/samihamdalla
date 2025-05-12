@@ -2,6 +2,7 @@
 import { useState } from 'react';
 
 const About = () => {
+  // State to track the active tab (skills or education)
   const [activeTab, setActiveTab] = useState('skills');
   
   const skills = {
@@ -11,7 +12,8 @@ const About = () => {
   };
   
   return (
-    <div className="py-24 px-6 bg-gray-50" id="about">
+    // padding horizontally and vertically. id for nav
+    <div className="py-24 px-6 bg-gray-100" id="about">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-1/2">
@@ -46,9 +48,10 @@ const About = () => {
               </a>
             </div>
           </div>
-          
+          {/* skills section */}
           <div className="md:w-1/2 bg-white shadow-lg rounded-lg p-6">
             <div className="flex border-b mb-6">
+              {/* tabs for skills and education to make it easier to add more*/}
               {['Skills', 'Education'].map((tab) => (
                 <button 
                   key={tab}
@@ -69,6 +72,7 @@ const About = () => {
                 <div className="mb-6">
                   <h3 className="text-lg font-medium mb-3">Programming Languages</h3>
                   <div className="flex flex-wrap gap-2">
+                    {/* map through the skills and create a span for each one */}
                     {skills.languages.map(skill => (
                       <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
                         {skill}
@@ -80,6 +84,7 @@ const About = () => {
                 <div className="mb-6">
                   <h3 className="text-lg font-medium mb-3">Frameworks & Libraries</h3>
                   <div className="flex flex-wrap gap-2">
+                    {/* map through the skills and create a span for each one */}
                     {skills.frameworks.map(skill => (
                       <span key={skill} className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">
                         {skill}
@@ -91,6 +96,7 @@ const About = () => {
                 <div>
                   <h3 className="text-lg font-medium mb-3">DevOps & Tools</h3>
                   <div className="flex flex-wrap gap-2">
+                    {/* map through the skills and create a span for each one */}
                     {skills.tools.map(skill => (
                       <span key={skill} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">
                         {skill}
@@ -100,7 +106,7 @@ const About = () => {
                 </div>
               </div>
             )}
-            
+            {/* education section */}
             {activeTab === 'education' && (
               <div>
                 <div className="border-l-4 border-blue-600 pl-4 mb-6">
