@@ -50,12 +50,12 @@ const Hero = () => {
         </p>
         
         <div className="flex justify-center space-x-4">
-          <a href="#projects" className="px-8 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors">
-            View Projects
+          <a href="#experience" className="px-8 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors">
+            View Work
           </a>
           {/* i might change this to something else later */}
-          <a href="#contact" className="px-8 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors">
-            Contact Me
+          <a href="#resume" className="px-8 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors">
+            Resume
           </a>
         </div>
       </div>
