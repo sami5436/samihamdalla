@@ -7,10 +7,10 @@ const Experience = () => {
       period: 'Jan 2025 - Present',
       location: 'Houston, TX',
       description: [
-        'Built and maintained Java Swing GUIs for flight controllers, utilizing Subversion for version control',
-        'Attended daily SCRUMs and collaborated on mission-critical software development within NASA\'s ecosystem'
+        'Built mission-critical software for space communication'
       ],
-      logo: '🚀'
+      logo: 'https://gpm.nasa.gov/sites/default/files/document_files/NASA-Logo-Large.png',
+      logoAlt: 'NASA Logo'
     },
     {
       company: 'ExxonMobil',
@@ -18,11 +18,10 @@ const Experience = () => {
       period: 'May 2024 - Aug 2024',
       location: 'Spring, TX',
       description: [
-        'Migrated 8 infrastructures from Terraform Open Source to Enterprise, improving deployment time by 90%',
-        'Optimized resource allocation, cutting Azure costs by 15% without impacting performance',
-        'Created 10+ YAML CI/CD workflows, automating processes and reducing deployment errors by 40%'
+        'Optimized infrastructure for refined product operations'
       ],
-      logo: '⚙️'
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Exxon_Mobil_Logo.svg/2560px-Exxon_Mobil_Logo.svg.png',
+      logoAlt: 'ExxonMobil Logo'
     },
     {
       company: 'I2E Consulting',
@@ -30,11 +29,10 @@ const Experience = () => {
       period: 'May 2023 - Aug 2023',
       location: 'Groton, CT',
       description: [
-        'Developed a GUI to process CSV files into refined Excel outputs, streamlining data workflows by 50%',
-        'Completed intensive SQL and Pandas training, enhancing data analysis efficiency by 30%',
-        'Optimized project tracking by leveraging Jira and facilitating communication in weekly meetings'
+        'Delivered data solutions for diverse clients'
       ],
-      logo: '💻'
+      logo: 'https://www.i2econsulting.com/_next/image?url=%2Fimages%2Fi2e-Logo_RGB-for-digital-use-1.png&w=256&q=75',
+      logoAlt: 'I2E Consulting Logo'
     },
     {
       company: 'University of Houston',
@@ -42,10 +40,10 @@ const Experience = () => {
       period: 'Aug 2024 - Present',
       location: 'Houston, TX',
       description: [
-        'Mentored over 400+ students in C++ Data Structures, resulting in a 21% improvement in average scores',
-        'Provided feedback on C++ assignments, enhancing comprehension and reducing error rates by 30%'
+        'Mentored students with passion and care'
       ],
-      logo: '🎓'
+      logo: 'https://www.uh.edu/brand/_img/uh_red.png',
+      logoAlt: 'University of Houston Logo'
     },
     {
       company: 'Katy Independent School District',
@@ -53,11 +51,10 @@ const Experience = () => {
       period: 'May 2022 - Aug 2022',
       location: 'Katy, TX',
       description: [
-        'Supported 21 schools by updating software and imaging 150+ computers weekly, ensuring system readiness',
-        'Initialized over $3 million worth of new equipment across multiple campuses, achieving operational excellence',
-        'Resolved 91% of tickets from teachers across 4 campuses to prepare for the new school year'
+        'Maintained educational technology across the district'
       ],
-      logo: '🖥️'
+      logo: 'https://pbs.twimg.com/profile_images/1450643039/KatyISD_400x400.jpg',
+      logoAlt: 'Katy ISD Logo'
     }
   ];
 
@@ -73,47 +70,47 @@ const Experience = () => {
           </p>
         </div>
         
-        <div className="relative border-l-2 border-gray-200 ml-3 md:ml-6 pl-6 md:pl-8 space-y-10">
-          {/* Map through experiences and display them.*/}
-          {/* exp is the experience object. index is the index of the experience in the array */}
-          {experiences.map((exp, index) => (
-            // relative is used to position properly
-            // becuase when i change the screen size, the position of the div changes
-            <div key={index} className="relative">
-              {/* -left-10 is used to position the logo to the left of the div */}
-              <div className="absolute -left-10 md:-left-14 top-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">
-                <span>{exp.logo}</span>
-              </div>
-              
-              <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 transform transition-all hover:-translate-y-1 hover:shadow-xl">
-                <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">{exp.position}</h3>
-                    <div className="flex items-center text-gray-600">
-                      <span className="font-medium text-blue-600">{exp.company}</span>
-                      <span className="mx-2">•</span>
-                      <span>{exp.location}</span>
-                    </div>
-                  </div>
-                  <div className="mt-2 md:mt-0">
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                      {exp.period}
-                    </span>
-                  </div>
+        <div className="relative" style={{ marginLeft: '32px' }}>
+          {/* Main timeline line */}
+          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+          
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <div key={index} className="relative pl-10">
+                {/* Company logo centered on timeline */}
+                <div className="absolute -left-8 top-4 w-16 h-16 flex items-center justify-center z-10">
+                  <img 
+                    src={exp.logo} 
+                    alt={exp.logoAlt}
+                    className="w-20 h-20 object-contain"
+                  />
                 </div>
                 
-                <ul className="space-y-2 text-gray-700">
-                  {/* Map through the description array and display each item */}
-                  {exp.description.map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-blue-600 mr-2">›</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Timeline node behind the logo */}
+                <div className="absolute left-0 top-8 w-4 h-4  rounded-full"></div>
+                
+                <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 ml-8 transform transition-all hover:-translate-y-1 hover:shadow-xl">
+                  <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900">{exp.position}</h3>
+                      <div className="flex items-center text-gray-600">
+                        <span className="font-medium text-blue-600">{exp.company}</span>
+                        <span className="mx-2">•</span>
+                        <span>{exp.location}</span>
+                      </div>
+                    </div>
+                    <div className="mt-2 md:mt-0">
+                      <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                        {exp.period}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-700">{exp.description[0]}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
