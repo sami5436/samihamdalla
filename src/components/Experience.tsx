@@ -74,8 +74,13 @@ const Experience = () => {
         </div>
         
         <div className="relative border-l-2 border-gray-200 ml-3 md:ml-6 pl-6 md:pl-8 space-y-10">
+          {/* Map through experiences and display them.*/}
+          {/* exp is the experience object. index is the index of the experience in the array */}
           {experiences.map((exp, index) => (
+            // relative is used to position properly
+            // becuase when i change the screen size, the position of the div changes
             <div key={index} className="relative">
+              {/* -left-10 is used to position the logo to the left of the div */}
               <div className="absolute -left-10 md:-left-14 top-0 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white">
                 <span>{exp.logo}</span>
               </div>
@@ -98,6 +103,7 @@ const Experience = () => {
                 </div>
                 
                 <ul className="space-y-2 text-gray-700">
+                  {/* Map through the description array and display each item */}
                   {exp.description.map((item, i) => (
                     <li key={i} className="flex items-start">
                       <span className="text-blue-600 mr-2">›</span>
